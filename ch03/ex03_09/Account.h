@@ -16,6 +16,21 @@ public:
       }
    }
 
+   void deposit(int depositAmount) {
+      if (depositAmount > 0) {
+         balance = balance + depositAmount;
+      }
+   }
+
+   void withdraw(int withdrawalAmount) {
+      if (withdrawalAmount <= balance) {
+         balance = balance - withdrawalAmount;
+      }
+      else {
+         std::cout << "\nWithdrawal amount exceeded account balance." << std::endl;
+      }
+   }
+
    int getBalance() const {
       return balance;
    }
