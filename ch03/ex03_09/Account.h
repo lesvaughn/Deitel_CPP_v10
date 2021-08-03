@@ -31,4 +31,5 @@ public:
 private:
    std::string name;
    int balance{0};
+   
 }
