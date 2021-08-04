@@ -13,17 +13,10 @@ int main()
    int int2{ 0 };
    std::cin >> int1 >> int2;
 
-   int sum{ 0 };
-   sum = int1 + int2;
-
-   int product{ 0 };
-   product = int1 * int2;
-
-   int difference{ 0 };
-   difference = int1 - int2;
-
-   int quotient{ 0 };
-   quotient = int1 / int2;
+   int sum{int1 + int2};
+   int product{int1 * int2};
+   int difference{int1 - int2};
+   int quotient{int1 / int2};
 
    std::cout << "Sum is " << sum;
    std::cout << "\nProduct is " << product;

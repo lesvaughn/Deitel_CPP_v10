@@ -11,17 +11,10 @@ int main()
    int age{ 0 };
    std::cin >> age;
 
-   int mhr{ 0 };
-   mhr = 220 - age;
-
-   int tanaka{ 0 };
-   tanaka = 208 - (0.7 * age);
-
-   int gellish{ 0 };
-   gellish = 207 - (0.7 * age);
-
-   int nes{ 0 };
-   nes = 211 - (.64 * age);
+   int mhr{220 - age};
+   int tanaka{ 208 - static_cast<int>(0.7 * age)};
+   int gellish{207 - static_cast<int>(0.7 * age)};
+   int nes{211 - static_cast<int>(.64 * age)};
 
    int smallestMHR{ mhr };
    if (tanaka < smallestMHR) {

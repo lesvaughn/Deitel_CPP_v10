@@ -37,10 +37,10 @@ public:
    }
 
    int getUnits() const {
-      double vatTax = amountPaid * vat;
-      double reaTax = amountPaid * rea;
-      double ewuraTax = amountPaid * ewura;
-      double amountAmountAfterDeductions = amountPaid - vatTax - reaTax - ewuraTax - serviceCharge;
+      double vatTax{amountPaid * vat};
+      double reaTax{amountPaid * rea};
+      double ewuraTax{amountPaid * ewura};
+      double amountAmountAfterDeductions{amountPaid - vatTax - reaTax - ewuraTax - serviceCharge};
 
       return static_cast<int>(amountAmountAfterDeductions) / pricePerKilowatt;
    }

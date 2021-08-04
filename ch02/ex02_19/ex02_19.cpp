@@ -13,21 +13,12 @@ int main()
    int int3{ 0 };
    std::cin >> int1 >> int2 >> int3;
 
-   // calculate sum
-   int sum = { 0 };
-   sum = int1 + int2 + int3;
-
-   // calculate average
-   int average{ 0 };
-   average = sum / 3;
-
-   // calculate product
-   int product{ 0 };
-   product = int1 * int2 * int3;
+   int sum{int1 + int2 + int3};
+   int average{sum / 3};
+   int product{int1 * int2 * int3};
 
    // calculate smallest
-   int smallest{ 0 };
-   smallest = int1;
+   int smallest{ int1 };
    if (int2 < smallest) {
       smallest = int2;
    }
@@ -36,8 +27,7 @@ int main()
    }
 
    //calculate largest
-   int largest{ 0 };
-   largest = int1;
+   int largest{ int1 };
    if (int2 > largest) {
       largest = int2;
    }

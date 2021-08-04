@@ -15,8 +15,7 @@ int main()
    int height{ 0 };
    std::cin >> height;
 
-   int bmi{ 0 };
-   bmi = (weight * 703) / (height * height);
+   int bmi{(weight * 703) / (height * height)};
 
    std::cout << "BMI is " << bmi;
    std::cout << "\n\nBMI VALUES";
