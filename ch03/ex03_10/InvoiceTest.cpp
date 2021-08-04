@@ -61,7 +61,4 @@ int main()
    std::cout << "\nValue added tax:\t" << invoice1.getVat();
    std::cout << "\nDiscount rate:\t\t" << invoice1.getDiscountRate();
    std::cout << "\n\nInvoice amount:\t" << invoice1.getInvoiceAmount() << std::endl;
-
-
-
 }
