@@ -5,8 +5,6 @@
 // lvaughn
 
 #include <iostream>
-using std::cout;
-using std::endl;
 
 int main()
 {
@@ -15,12 +13,12 @@ int main()
 
    if ( y < 10 ) {
       if ( x > 10 )
-         cout << "XxXxX" << endl;
+         std::cout << "XxXxX" << std::endl;
       else
-         cout << "YxYxY" << endl;
+         std::cout << "YxYxY" << std::endl;
    }
    else {
-      cout << "OoOoO" << endl;
+      std::cout << "OoOoO" << std::endl;
    }
 
    x = 15;
@@ -28,14 +26,14 @@ int main()
 
    if ( y < 10 ) {
       if ( x > 10 ) {
-         cout << "XxXxX" << endl;
+         std::cout << "XxXxX" << std::endl;
       }
       else {
-         cout << "YxYxY" << endl;
+         std::cout << "YxYxY" << std::endl;
       }
    }
    else {
-      cout << "OoOoO" << endl;
+      std::cout << "OoOoO" << std::endl;
    }
   
 }

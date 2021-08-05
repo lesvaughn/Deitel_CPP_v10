@@ -5,7 +5,6 @@
 // lvaughn
 
 #include <iostream>
-using std::cout;
 
 int main()
 {
@@ -14,10 +13,10 @@ int main()
 
    if ( x > 5 ) {
       if ( y > 5 ) {
-         cout << "x and y are > 5";
+         std::cout << "x and y are > 5";
       }
    }
    else {
-      cout << "x is <= 5";
+      std::cout << "x is <= 5";
    }
 }
