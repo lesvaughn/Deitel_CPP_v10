@@ -1,0 +1,11 @@
+// ex04_21.txt
+// Deitel - C++ How to Program v10
+// Exercise 4.21
+// Aug 5, 2021
+// lvaughn
+
+The mystery program does not print anything.
+
+The while loop fails as the variable "c" is not less than or equal to 1
+as "c" was initialized to 8.
+

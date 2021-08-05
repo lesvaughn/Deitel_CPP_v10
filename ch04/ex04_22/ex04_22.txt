@@ -1,0 +1,22 @@
+// ex40_22.txt
+// Deitel - C++ How to Program
+// Exercise 4.22
+// Aug 5, 2021
+// lvaughn
+
+
+Note my edition of the book my have had a typo.
+Line 9 did not conclude with a "{'.
+
+If intentional, the program will would not print anythng as a compile
+error would occur.  If the author intended for line 9 to conclude with
+an opening "{", the program would then print:
+
+#@@#@@
+#@@#@@
+#@@#@@
+<-----><-----><-----><----->
+#@@#@@
+#@@#@@
+#@@#@@
+<-----><-----><-----><----->
