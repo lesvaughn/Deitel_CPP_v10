@@ -1,0 +1,24 @@
+/*
+ ***************************************************
+ *
+ * ex04_32.txt
+ * 
+ * Deitel - C++ How to Program
+ * Exercise 4.32 (What's wrong with the followint statement?)
+ * 
+ * Created: Aug 6, 2021
+ * Author:  Les Vaughn
+ * 
+ ***************************************************
+*/
+
+What's wrong with the following statement?  Provide the correct statement
+to accomplish what the programmer was probably trying to do.
+
+cout << ++(x + Y);
+
+The "++" increment operator can only increment an lvalue.  Most likely the
+programmer wanted to do the following:
+
+z = x + y;
+std::cout << ++z;
