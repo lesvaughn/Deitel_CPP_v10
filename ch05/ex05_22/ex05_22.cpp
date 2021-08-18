@@ -48,6 +48,6 @@ int main()
    std::cout << "\nPart d:" << std::endl;
    std::cout << (!( a == b ) || !( b != 2)) << std::endl;
    
-   // Rewritten usin De Morgan's Law
+   // Rewritten using De Morgan's Law
    std::cout << !(( a == b) && ( b != 2)) << std::endl;
 } 
