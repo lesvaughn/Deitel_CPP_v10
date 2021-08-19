@@ -1,0 +1,29 @@
+/*
+ ***************************************************
+ *
+ * ex06_17.cpp
+ * 
+ * Deitel - C++ How to Program
+ * Exercise 6.17 (Random Numbers)
+ * 
+ * Created: Aug 19,2021
+ * Author:  Les Vaughn
+ * 
+ ***************************************************
+*/
+
+Write a single statement that prints a number at random from each
+of the following sets:
+
+a) 0, 3, 6, 9, 12
+
+   std::cout << ( rand() % 5 ) * 3;
+
+b) 3, 5, 7, 9, 11, 13
+
+   std::cout << (( 1  + rand() % 6 ) * 2 ) + 1;
+
+c) 6, 10, 14, 18
+
+   std::cout << ((( 1  + rand() % 4 ) * 2 ) + 1 ) * 2;
+

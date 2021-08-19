@@ -1,0 +1,40 @@
+/*
+ ***************************************************
+ *
+ * ex06_16.txt
+ * 
+ * Deitel - C++ How to Program
+ * Exercise 6.16 (Random Numbers)
+ * 
+ * Created: Aug 18,2021
+ * Author:  Les Vaughn
+ * 
+ ***************************************************
+*/
+
+Write statements that assign random integers to the variable n in the
+following ranges:
+
+a) 0 <= n <= 3
+
+   unsigned int n{ rand() % 4 };
+
+b) 1 <= n <= 50
+
+   unsigned int n{ 1 + rand() % 50 };
+
+c) 2 <= n <= 44
+
+   unsigned int n{ 2 + rand() % 43 };
+
+d) 500 <= n <= 678
+
+   unsigned int{ 500 + rand() % 179 };
+
+e) -2 <= n <= 2
+
+   int{ -2 + rand() %  5 };
+
+f) -3 <=n <= 12
+
+   int{ -3 + rand() % 16};

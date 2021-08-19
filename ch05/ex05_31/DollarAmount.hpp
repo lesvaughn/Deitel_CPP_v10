@@ -4,9 +4,9 @@
  * DollarAmount.hpp
  * 
  * Deitel - C++ How to Program
- * Exercise 5.23 (DollarAmount Constructor with Two Parameters)
+ * Exercise 5.31 (DollarAmount Arithmetic)
  * 
- * Created: Aug 9,2021
+ * Created: Aug 18,2021
  * Author:  Les Vaughn
  * 
  ***************************************************
@@ -21,6 +21,14 @@ public:
 
    int64_t getAmount() const {
       return amount;
+   }
+
+   void divide( int64_t factor ) {
+      DollarAmount remainingAmt {
+         amount / factor
+      };
+
+      amount = remaingAmt;
    }
 
 private:
