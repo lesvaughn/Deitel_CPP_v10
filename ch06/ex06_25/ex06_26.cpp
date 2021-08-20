@@ -13,6 +13,7 @@
 */
 #include <iostream>
 
+int elapsedMinutes( int, int, int );
 
 
 int main()
