@@ -24,15 +24,10 @@ int main() {
 
 } // end main
 
-int gcd( int x, int y ) {
-   int gcd{1};
-   int smallest{x};
-   
-   if ( y < smallest ) {
-      smallest = y;
-   }
+int gcd( int x, int y ) {  
+   int gcd;
 
-   for ( int divisor{2}; divisor <= smallest; ++divisor ) {
+   for ( int divisor{1}; divisor <= x && divisor <= y; ++divisor ) {
       if ( x % divisor == 0 && y % divisor == 0 ) {
          gcd = divisor;
       }
