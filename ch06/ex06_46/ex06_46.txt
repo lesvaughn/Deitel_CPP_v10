@@ -1,0 +1,45 @@
+/*
+ ***************************************************
+ *
+ * ex06_46.cpp
+ * 
+ * Deitel - C++ How to Program
+ * Exercise 6.46 (Find the Error)
+ * Created: Aug 23,2021
+ * Author:  Les Vaughn
+ * 
+ ***************************************************
+*/
+
+a)	The function prototype for float denotes a float will be return as a result of the function
+	call.  Howerver, the actual function definition does not define a return value. Therefore,
+	the function definition should be as follows:
+
+		float cube(float number) {
+			return number * number * number;
+		}
+
+b)	srand seeds the random number generator.  srand should be on its own line as a statement
+	containing a seed value.  
+
+	The seed value could be provided by input from the user:
+		srand(seed_value_input_by_user);
+
+	Or the seed value could be the current time as follows:
+		srand(static_cast<unsigned_int>(ctime(0)));
+
+c)	As x is an integer, setting x to the float value of y will cause precision loss resulting
+	in the decimal portion to y being lost.  static_cast<float>(x) will still result in the
+	decimal portion lost.  Assuming the author wanted to cast the float to an int, the following
+	could have been written:
+
+		cout <<static_cast<int>(y);
+
+d)	The function's arguments for 'a' an 'b' are overwritten and initialized to zero.  The function
+	will always return zero. To fix, this issue, the twoe statements which initialize 'a' and 'b' 
+	to zero should be eliminated;
+
+e) The recursive function does not decrement the value of n.  Therefore, 'n' will not reach
+	the value of zero and thus terminate.  The fix is as follows:
+
+		return n + sum(n - 1);
