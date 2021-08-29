@@ -1,0 +1,31 @@
+*
+ ***************************************************
+ *
+ * ex07_12.txt
+ * 
+ * Deitel - C++ How to Program
+ * Exercise 7.12 (Find the Errors)
+ * Created: Aug 27,2021
+ * Author:  Les Vaughn
+ * 
+ ***************************************************
+*/
+
+a)	Assume that matrix is an array of integers with 3 rows and 3 columns.
+		cin >> matrix[3] [2];
+
+		There is no error.
+
+b)	Assume that matrix is an array of integers with 3 rows adn 2 columns.
+		martix[2] [ ] = 10;
+
+	The column number is not specified.
+
+c)	array<double, 4> rate{12.5, 9.5, 10.0, 5.0, 2.5};
+
+	The array has 4 positions.  However, 5 initializers have been provided.
+
+d)	Assume that marks is an array of 5 integers.
+		cout << marks[5];
+
+	marks[5] is the sixth element.  The array has five elements.
