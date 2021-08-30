@@ -1,0 +1,15 @@
+/*
+ ***************************************************
+ *
+ * ex07_17.txt
+ * 
+ * Deitel - C++ How to Program
+ * Exercise 7.17 (What Does This Code Do?)
+ 
+ * Created: Aug 30, 2021
+ * Author:  Les Vaughn
+ * 
+ ***************************************************
+*/
+
+This program sums the elements contained in the array 'a'.
