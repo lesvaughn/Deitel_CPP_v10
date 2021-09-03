@@ -15,8 +15,8 @@ Consider a 2-by-3 integer array t.
 
 a)	Write a declaration for t.
 
-	const size_t rows{2};
-	const size_t columns{3};
+	const std::size_t rows{2};
+	const std::size_t columns{3};
 	std::array<std::array<int columns> , rows> t{};
 
 b)	How many rows does t have?
@@ -51,8 +51,8 @@ h)	Write a series of statements that initialize each element of t to zero.  Do n
 
 i)	Write a nested counter-controlled for statement that initializes each element of t to zero.
 
-	for (size_t i{0}; i < t.size(); ++i) {
-		for (size_t j{0}; j < t[row].size(); ++j) {
+	for (std::size_t i{0}; i < t.size(); ++i) {
+		for (std::size_t j{0}; j < t[row].size(); ++j) {
 			t[i][j] = 0;
 		}
 	}
@@ -60,7 +60,7 @@ i)	Write a nested counter-controlled for statement that initializes each element
 j)	Write a nested range-based for statement that initializes each element of t to zero.
 
 	for (row : t) {
-		for(element : row) {
+		for(element& : row) {
 			element = 0;
 		}
 	}
@@ -68,10 +68,9 @@ j)	Write a nested range-based for statement that initializes each element of t t
 k)	Write a statement that inputs the values for the elements of t from the keyboard.
 
 	for (row : t) {
-		for(element : row) {
+		for(element& : row) {
 			std::cout << "Input a value:  ";
-			int value;
-			std::cin >> value;
+			std::cin >> element;
 		}
 	}
 
@@ -93,7 +92,7 @@ m)	Write a statement that displays the elements in row 0 of t.
 n)	Write a statement that totals the elements of column 2 of t;
 
 	int total{0};
-	for(size_t i{0}; i < t.size(); ++i) {
+	for(std::size_t i{0}; i < t.size(); ++i) {
 		total += t[i][1];
 	}
 

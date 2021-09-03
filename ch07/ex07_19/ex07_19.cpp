@@ -62,6 +62,12 @@ int main() {
 				 << "\narray after initalization:  ";
 	outputIntegers1(integers3);
 
+   std::cout << "\nintegers1[5] is " << integers1[5];
+   std::cout << "\n\nAssigning 1000 to integers[5]" << std::endl;
+   integers1[5] = 1000;
+   std::cout << "integers1: ";
+   outputIntegers1(integers1);
+
 }
 
 void outputIntegers1(std::array<int, 7> &items) {

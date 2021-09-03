@@ -21,13 +21,13 @@ a)	Iitialize the 12 elements of int array items to 6.
 
 b) Add 6 to the first six elements of int array items.
 
-		for (size_t i{0}; i < 6; ++i) {
+		for (std::size_t i{0}; i < 6; ++i) {
 			items[i] += 6;
 		}
 
 c) Read next 6 values from the user and store in the int array items.
 
-		for (size_t i{6}; i < items.size(); ++i) {
+		for (std::size_t i{6}; i < items.size(); ++i) {
 			std::cout << "Enter an integer:  ";
 			std::cin >> items[i];
 		}
@@ -35,7 +35,7 @@ c) Read next 6 values from the user and store in the int array items.
 d)	Display the 12 values of int array items in column format with 4 values in one
 	row, the next 4 values in the next row, and so  on.
 
-		for (size_t i{0}; i < items.size(); ++i){
+		for (std::size_t i{0}; i < items.size(); ++i){
 			if (i % 4 == 0 && i != 0) {
 				std::cout << std::endl;
 			}

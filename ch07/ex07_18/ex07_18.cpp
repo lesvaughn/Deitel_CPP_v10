@@ -89,13 +89,13 @@ int main() {
 
 	std::cout << "Wins" << std::endl;
 
-	for (unsigned int i{1}; i <= 21; ++i) {
+	for (std::size_t i{1}; i <= 21; ++i) {
 		std::cout << i << "\t" << rollsToWin[i] << std::endl;
 	}
 
 	std::cout << "\nLoses" << std::endl;
 
-	for (unsigned int i{1}; i <= 21; ++i) {
+	for (std::size_t i{1}; i <= 21; ++i) {
 		std::cout << i << "\t" << rollsToLose[i] << std::endl;
 	}
 

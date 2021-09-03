@@ -25,9 +25,7 @@ int main() {
 		std::cin >> nbr;
 
 		if (nbr >=10 && nbr <= 100) {
-
 			bool found{false};
-
 
 			for (int item : values) {
 				if (item == nbr) {

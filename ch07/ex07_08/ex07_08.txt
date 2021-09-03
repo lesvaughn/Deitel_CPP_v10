@@ -18,7 +18,7 @@ a)	Display the value of element 3 of character array 'vowels'.
 
 b)	Read a value from the keyboard for the element 2 of one-dimensional integer array marks.
 
-	std::array<int, 2> marks{};
+	std::array<char, 2> marks{};
 	std::cout << "Enter a grade mark:  ";	
 	std::cin >> gradeMark;	// A, B, C, D, or F
 	marks[1] = gradeMark;
@@ -38,7 +38,7 @@ d)	Total and display the elements of floating-point array c of 200 elements
 e)	Copy array a into the first portion of array b.  Assume that both arrays contain doubles
 	and that arrays a and b have 17 and 41 elements respectively.
 
-	for (size_t i{0}; i < 17; ++i) {
+	for (std::size_t i{0}; i < 17; ++i) {
 		b[i] = a[i];
 	}
 
@@ -48,7 +48,7 @@ f)	Determine and display the smallest and largest values contained in 999-elemen
 	int smallest{w[0]};
 	int largest{w[0]};
 
-	for (size_t i{1}; i < 999; ++i) {
+	for (std::size_t i{1}; i < 999; ++i) {
 		if (w[i] < smallest) {
 			smallest = w[i];
 		}
