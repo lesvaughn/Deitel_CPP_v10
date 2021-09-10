@@ -17,7 +17,7 @@
 void towersOfHanoi(int, int, int, int);
 
 int main() {
-	towersOfHanoi(10, 1, 3, 2);
+	towersOfHanoi(3, 1, 3, 2);
 }
 
 void towersOfHanoi(int nbrDisks, int initialPeg, int destPeg, int tempPeg) {
@@ -31,3 +31,4 @@ void towersOfHanoi(int nbrDisks, int initialPeg, int destPeg, int tempPeg) {
 		towersOfHanoi(nbrDisks - 1, tempPeg, destPeg, initialPeg);
 	}
 }
+ 
