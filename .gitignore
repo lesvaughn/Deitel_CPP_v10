@@ -7,5 +7,6 @@
 # Unignore all dirs
 !*/
 .vscode
+.code-workspace
 *.exe
 program_header.txt
