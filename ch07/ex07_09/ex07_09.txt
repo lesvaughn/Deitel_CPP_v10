@@ -1,15 +1,14 @@
-/*
- ***************************************************
+/ *****************************************************************************
  *
- * ex07_09.cpp
+ * ex07_09.txt
  * 
  * Deitel - C++ How to Program
  * Exercise 7.9 (Two-Dimensional array Questions)
- * Created: Aug 27,2021
- * Author:  Les Vaughn
+ *
+ * Created: Dec 11,2021
+ * Author:  lvaughn
  * 
- ***************************************************
-*/
+ *****************************************************************************/
 
 Consider a 2-by-3 integer array t.
 
@@ -17,7 +16,7 @@ a)	Write a declaration for t.
 
 	const std::size_t rows{2};
 	const std::size_t columns{3};
-	std::array<std::array<int columns> , rows> t{};
+	std::array<std::array<int columns> , rows> t;
 
 b)	How many rows does t have?
 
@@ -37,19 +36,22 @@ e)	Write the names of all the elements in row 1 of t.
 
 f)	Write the names of all the elements in column 2 of t.
 
-	t[0][1], t[1][1]
+	t[1][0], t[1][1]
 
-g)	Write a statement that sets the element of t in the first row and second column to zero.
+g)	Write a statement that sets the element of t in the first row and second
+	column to zero.
 
 	t[0][1] = 0
 
-h)	Write a series of statements that initialize each element of t to zero.  Do not use a loop.
+h)	Write a series of statements that initialize each element of t to zero.
+	Do not use a loop.
 
 	const size_t rows{2};
 	const size_t columns{3};
 	std::array<std::array<int columns> , rows> t{0, 0, 0, 0, 0, 0};
 
-i)	Write a nested counter-controlled for statement that initializes each element of t to zero.
+i)	Write a nested counter-controlled for statement that initializes each
+	element of t to zero.
 
 	for (std::size_t i{0}; i < t.size(); ++i) {
 		for (std::size_t j{0}; j < t[row].size(); ++j) {
@@ -57,28 +59,31 @@ i)	Write a nested counter-controlled for statement that initializes each element
 		}
 	}
 
-j)	Write a nested range-based for statement that initializes each element of t to zero.
+j)	Write a nested range-based for statement that initializes each element of t
+	to zero.
 
-	for (row : t) {
-		for(element& : row) {
+	for (auto& row : t) {
+		for(auto& element : row) {
 			element = 0;
 		}
 	}
 
-k)	Write a statement that inputs the values for the elements of t from the keyboard.
+k)	Write a statement that inputs the values for the elements of t from the 
+	keyboard.
 
-	for (row : t) {
-		for(element& : row) {
+	for (int& row : t) {
+		for(int& element : row) {
 			std::cout << "Input a value:  ";
 			std::cin >> element;
 		}
 	}
 
-l)	Write a series of statements that determine and display the smallest value in array t.
+l)	Write a series of statements that determine and display the smallest value
+	in array t.
 
 	int smallest = t[0][0];
-	for(row : t) {
-		for(element : row) {
+	for(const int row : t) {
+		for(const int element : row) {
 			if (element < smallest) {
 				smallest = element;
 			}
@@ -91,22 +96,21 @@ m)	Write a statement that displays the elements in row 0 of t.
 
 n)	Write a statement that totals the elements of column 2 of t;
 
-	int total{0};
-	for(std::size_t i{0}; i < t.size(); ++i) {
-		total += t[i][1];
-	}
+	int total = t[0][1] + t[1][1];
 
-o)	Write a series of statements that print the array t in neat, tabular format.  List the
-	column subscripts as headings across the top and lists the row subscripts at the left
-	of each row.
+o)	Write a series of statements that print the array t in neat, tabular format.
+	List the column subscripts as headings across the top and lists the row
+	subscripts at the left of each row.
 
-	std::cout << "0" << std::setw(5) << "1" << std::setw(5) << "2" <, std::endl;
-	for(row : t) {
-		std::cout << row;
-		for(element : row) {
-			std::setw(5);
-			std::cout << element;
-		}
-		std::cout << std::endl;
-	}
+	std::cout << std::setw(6) << "0" << std::setw(5) << "1" << std::setw(5)
+        << "2" << std::endl;
+	for (size_t i{ 0 }; i < rows; ++i)
+    {
+        std::cout << i;
+        for (size_t j{ 0 }; j < columns; ++j)
+        {
+            std::cout << std::setw(5) << t[i][j];
+        }
+        std::cout << std::endl;
+    }
 

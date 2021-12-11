@@ -1,52 +1,47 @@
-*
- ***************************************************
+/******************************************************************************
  *
- * ex07_08.cpp
+ * ex07_08.txt
  * 
  * Deitel - C++ How to Program
  * Exercise 7.8 (Write C++ Statements)
- * Created: Aug 27,2021
- * Author:  Les Vaughn
+ *
+ * Created: Dec 11,2021
+ * Author:  lvaughn
  * 
- ***************************************************
-*/
+ *****************************************************************************/
 
-a)	Display the value of element 3 of character array 'vowels'.
+a)	Display the value of element 5 of character array f.
 
-	std::array<char, 6> vowels{'a', 'e', 'i', 'o', 'u'}
-	std::cout << vowels[2] << std::endl;
+	std::cout << f[4] << std::endl;
 
-b)	Read a value from the keyboard for the element 2 of one-dimensional integer array marks.
+b)	Input a value into element 3 of one-dimensional floating-point array b
 
-	std::array<char, 2> marks{};
-	std::cout << "Enter a grade mark:  ";	
-	std::cin >> gradeMark;	// A, B, C, D, or F
-	marks[1] = gradeMark;
+	std::cin >> b[2];
 
-c)	Initialize each of the 4 elemens of one-dimensional integer array g to 7.
+c)	Initialize each of the 4 elements of one-dimensional integer array g to 7.
 
 	std::array<int, 7> g{7, 7, 7, 7}
 
 d)	Total and display the elements of floating-point array c of 200 elements
 
 	double total{0};
-	for (double item : c) {
+	for (auto double item : c) {
 		total += item;
 	}
 	std::cout << "The total is " << total << std::endl;
 
-e)	Copy array a into the first portion of array b.  Assume that both arrays contain doubles
-	and that arrays a and b have 17 and 41 elements respectively.
+e)	Copy array a into the first portion of array b.  Assume that both arrays
+	contain doubles and that arrays a and b have 17 and 41 elements respectively.
 
 	for (std::size_t i{0}; i < 17; ++i) {
 		b[i] = a[i];
 	}
 
-f)	Determine and display the smallest and largest values contained in 999-element
-	floating-point array w.
+f)	Determine and display the smallest and largest values contained
+	in 999-element floating-point array w.
 
-	int smallest{w[0]};
-	int largest{w[0]};
+	int smallest{ w[0] };
+	int largest { w[0] };
 
 	for (std::size_t i{1}; i < 999; ++i) {
 		if (w[i] < smallest) {

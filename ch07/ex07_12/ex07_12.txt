@@ -1,31 +1,33 @@
-*
- ***************************************************
+/******************************************************************************
  *
  * ex07_12.txt
  * 
  * Deitel - C++ How to Program
  * Exercise 7.12 (Find the Errors)
- * Created: Aug 27,2021
- * Author:  Les Vaughn
+
+ * Created: Dec 11,2021
+ * Author:  lvaughn
  * 
- ***************************************************
-*/
+ *****************************************************************************/
 
-a)	Assume that matrix is an array of integers with 3 rows and 3 columns.
-		cin >> matrix[3] [2];
+		Find the errors in the followint statements:
 
-		There is no error.
+a)	array<int, 5> f{0, 1, 2, 0, 1, 2};
 
-b)	Assume that matrix is an array of integers with 3 rows adn 2 columns.
-		martix[2] [ ] = 10;
+	Array 'f' is declared to have 5 elements.  However, it is being 
+	initialized with 6 elements.
 
-	The column number is not specified.
+b)	Assume that array_vals is an array of three doubles
+		cin >> array_vals[3];
 
-c)	array<double, 4> rate{12.5, 9.5, 10.0, 5.0, 2.5};
+	The statement is attempting to put the input value into the fourth
+	position of a three element array.
 
-	The array has 4 positions.  However, 5 initializers have been provided.
+c)	Assume that array_vals is an array of doubles with two rows and 
+	three columns.
+		array<array<double, 2> 3> array_vals;
 
-d)	Assume that marks is an array of 5 integers.
-		cout << marks[5];
+	The size of the rows and columns are delcared backwards. The should be
+	declared left to right, rows first then columns.
 
-	marks[5] is the sixth element.  The array has five elements.
+d)	

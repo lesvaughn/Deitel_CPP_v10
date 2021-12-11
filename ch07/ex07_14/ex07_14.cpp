@@ -1,15 +1,14 @@
-/*
- ***************************************************
+/******************************************************************************
  *
  * ex07_14.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.14 (Duplicate Eliminatin with vector)
- * Created: Aug 29,2021
+ * Created: Dec 11,2021
  * Author:  Les Vaughn
  * 
- ***************************************************
-*/
+ *****************************************************************************/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -17,9 +16,9 @@
 int main() {
 	std::vector<int> values;
 
-	unsigned int cntr{0};
+	unsigned int cntr{1};
 
-	while (cntr < 20) {
+	while (cntr <= 20) {
 		std::cout << "Enter an integer between 10 and 100 inclusive:  ";
 		int nbr;
 		std::cin >> nbr;
@@ -30,6 +29,7 @@ int main() {
 			for (int item : values) {
 				if (item == nbr) {
 					found = true;
+					break;
 				}
 			}
 

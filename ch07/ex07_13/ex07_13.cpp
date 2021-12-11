@@ -1,22 +1,24 @@
-/*
- ***************************************************
+/*****************************************************************************
  *
  * ex07_13.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.13 (Deuplcate Elimination with array)
- * Created: Aug 28,2021
+ * Compiled using GNU 11.2.1
+ * 
+ * Created: Dec 11,2021
  * Author:  Les Vaughn
  * 
- ***************************************************
-*/
+ *****************************************************************************/
+
 #include <iostream>
 #include <array>
 #include <algorithm>
 
 
 int main() {
-	std::array<int, 20> values;
+	const size_t arraySize{20};
+	std::array<int, arraySize> values;
 	unsigned int cntr{1};
 	size_t pos{0};
 
@@ -28,9 +30,10 @@ int main() {
 		if (nbr >= 10 && nbr <= 100) {
 			bool found{false};
 
-			for (int item : values) {
+			for (auto item : values) {
 				if (item == nbr) {
 					found = true;
+					break;
 				}
 			}
 
@@ -48,11 +51,9 @@ int main() {
 
 	std::sort(values.begin(), values.end());
 
-	for (int item : values) {
+	for (auto item : values) {
 		if (item > 0) {
 			std::cout << item << std::endl;
 		}
 	}
-
-
-}
+} // end main
