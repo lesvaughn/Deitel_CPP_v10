@@ -1,17 +1,17 @@
-/*
- ***************************************************
- *
+/******************************************************************************
  * ex07_18.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.18 (Craps Game Modification)
- 
- * Created: Aug 30,2021
- * Author:  Les Vaughn
  * 
- ***************************************************
-*/
+ * Compiled using GNU 11.2.1
+ *
+ * Created: Dec 12,2021
+ * Author:  lvaughn
+ *****************************************************************************/
+
 #include <iostream>
+#include <iomanip>
 #include <random>
 #include <ctime>
 #include <array>
@@ -24,8 +24,9 @@ std::uniform_int_distribution<unsigned int> dieRoll{1, 6};
 
 int main() {
 	enum class Status {CONTINUE, WON, LOST};
-	std::array<int, 22> rollsToWin{};
-	std::array<int, 22> rollsToLose{};
+	const size_t arraySize{22};
+	std::array<int, arraySize> rollsToWin{};
+	std::array<int, arraySize> rollsToLose{};
 
 
 	unsigned int myPoint{0};
@@ -34,7 +35,7 @@ int main() {
 	Status gameStatus;
 
 	for (unsigned int i{0}; i < 1000; ++i) {
-		int nbrRolls{1};
+		size_t nbrRolls{1};
 		++totalRolls;
 		unsigned int sumOfDice{rollDice()};
 
@@ -51,7 +52,6 @@ int main() {
 			default:
 				gameStatus = Status::CONTINUE;
 				myPoint = sumOfDice;
-				std::cout << "Point is " << myPoint << std::endl;
 				break;
 		} // end swtich
 
@@ -75,32 +75,23 @@ int main() {
 				nbrRolls = 21;
 			}
 			++rollsToWin[nbrRolls];
-			std::cout << "Play wins" << std::endl;
 		}
 		else {
 			if (nbrRolls > 21) {
 				nbrRolls = 21;
 			}
 			++rollsToLose[nbrRolls];
-			std::cout << "Player loses" << std::endl;
 		}
 
 	}// end for
 
-	std::cout << "Wins" << std::endl;
+	std::cout << std::setw(4) << "Roll" << std::setw(8) << "Wins"
+		<< std::setw(8) << "Loses" << std::endl;
 
-	for (std::size_t i{1}; i <= 21; ++i) {
-		std::cout << i << "\t" << rollsToWin[i] << std::endl;
+	for (std::size_t i{1}; i < arraySize; ++i) {
+		std::cout << std::setw(4) << i << std::setw(8) << rollsToWin[i]
+		<< std::setw(8) << rollsToLose[i] << std::endl;
 	}
-
-	std::cout << "\nLoses" << std::endl;
-
-	for (std::size_t i{1}; i <= 21; ++i) {
-		std::cout << i << "\t" << rollsToLose[i] << std::endl;
-	}
-
-	std::cout << "The average length of a craps game is " << totalRolls / 1000 << " rolls" << std::endl;
-
 
 } // end main
 
@@ -109,6 +100,5 @@ unsigned int rollDice() {
 	int die2 = dieRoll(craps_engine);
 	int sum{die1 + die2};
 
-	std::cout << "Player rolled " << die1 << " + " << die2 << " = " << sum << std::endl;
 	return sum;
 }

@@ -3,6 +3,7 @@
  * 
  * Deitel - C++ How to Program
  * Exercise 7.10 (Server Income Ranges)
+ * 
  * Compiled using GNU 11.2.1
  * 
  * Created: Dec 11,2021

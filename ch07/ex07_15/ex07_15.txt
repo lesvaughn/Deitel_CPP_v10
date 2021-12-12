@@ -1,15 +1,14 @@
-*/
- ***************************************************
+/******************************************************************************
  *
  * ex07_08.txt
  * 
  * Deitel - C++ How to Program
- * Exercise 7.15 (Two-Dimensional array Initalizatoin)
- * Created: Aug 29,2021
- * Author:  Les Vaughn
+ * Exercise 7.15 (Two-Dimensional array Initalization)
+
+ * Created: Dec 12,2021
+ * Author:  lvaughn
  * 
- ***************************************************
-*/
+ *****************************************************************************/
 
 Label the elements of a 3-by-5 two-dimensional array sales to indicate the order in which they
 are set to zero by the following program segment:

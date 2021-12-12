@@ -1,11 +1,11 @@
 /******************************************************************************
- * ex07_20.txt
+ * ex07_17.txt
  * 
  * Deitel - C++ How to Program
- * Exercise 7.20 (What Does This Code Do?)
+ * Exercise 7.17 (What Does This Code Do?)
  * 
- * Created: Dec 12,2021
- * Author:  lvaughn
+ * Created: Dec 12, 2021
+ * Author:  Les Vaughn
  *****************************************************************************/
 
-This program prints the values contained in array 'a' in reverse order.
+The program in exercise 7.17 sums the values in array a

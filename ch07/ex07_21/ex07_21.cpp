@@ -1,26 +1,23 @@
-/*
- ***************************************************
- *
+/******************************************************************************
  * ex07_21.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.21 (Workshop Summary)
  * 
+ * Compiled using GNU 11.2.1
+ * 
  * Created: Sept 1,2021
  * Author:  Les Vaughn
- * 
- ***************************************************
-*/
+ *****************************************************************************/
+
 #include <iostream>
 #include <iomanip>
 #include <array>
 
-
-
 int main() {
-   const std::size_t craftsmen{4};
-   const std::size_t products{5};
-   std::array<std::array<int, products>, craftsmen> stock{0};
+   const std::size_t nbrCraftsmen{4};
+   const std::size_t nbrProducts{5};
+   std::array<std::array<int, nbrProducts>, nbrCraftsmen> stock{0};
 
    std::cout << "Enter the craftsman's number 1 through 3 are valid values (-1 to quit):  ";
    int craftmensNbr;
@@ -47,9 +44,9 @@ int main() {
 
    int total{0};
 
-   for (std::size_t craftPerson{1}; craftPerson < craftsmen; ++craftPerson) {
+   for (std::size_t craftPerson{1}; craftPerson <nbrCraftsmen; ++craftPerson) {
       std::cout << std::setw(12) << "Craftperson " << craftPerson;
-      for(std::size_t product{1}; product < products; ++product) {    
+      for(std::size_t product{1}; product < nbrProducts; ++product) {    
          std::cout << std::setw(12) << stock[craftPerson][product];
          total += stock[craftPerson][product];
       }
@@ -57,4 +54,4 @@ int main() {
       total = 0;
    }
 
-}
+} // end main

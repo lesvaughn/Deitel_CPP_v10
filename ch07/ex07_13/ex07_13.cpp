@@ -1,14 +1,13 @@
 /*****************************************************************************
- *
  * ex07_13.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.13 (Deuplcate Elimination with array)
+ * 
  * Compiled using GNU 11.2.1
  * 
  * Created: Dec 11,2021
  * Author:  Les Vaughn
- * 
  *****************************************************************************/
 
 #include <iostream>
