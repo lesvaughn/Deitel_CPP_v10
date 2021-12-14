@@ -19,36 +19,45 @@
 int main() {
    const unsigned int row{8};
    const unsigned int column{8};
-   std::array<std::array<int, column>, row> board{0};
+   std::array<std::array<int, column>, row> board;
    std::array<int, column> horizontal{2, 1, -1, -2, -2, -1, 1, 2};
    std::array<int, row> vertical{-1, -2, -2, -1, 1, 2, 2, 1};
 
    std::default_random_engine moveEngine{static_cast<unsigned int>(time(0))};
-   std::uniform_int_distribution<unsigned int> randomMove{0, 7};
+   std::uniform_int_distribution<size_t> randomMove{0, 7};
 
    unsigned int moveCount{0};
-   int currentRow{3};
-   int currentColumn{4};
-   bool landedAlready{false};
+   size_t currentRow{3};
+   size_t currentColumn{4};
+   unsigned int counter{0};
 
-   while (moveCount <= 64 && landedAlready == false) {
-      int moveNumber = randomMove(moveEngine);
-      if (currentRow + horizontal[moveNumber] >= 0 && currentRow + horizontal[moveNumber] <= 7
-            && currentColumn + vertical[moveNumber] >= 0 && currentColumn + 
-               vertical[moveNumber] <= 7) {
-         if (board[currentRow + horizontal[moveNumber]][currentColumn + vertical[moveNumber]] 
-               == 0) {
-            currentRow += horizontal[moveNumber];
-            currentColumn += vertical[moveNumber];
+   std::cout << "\nKnight starts at row " << currentRow << " and column "
+      << currentColumn << std::endl;
+
+   while (counter <= 64)
+   {
+      size_t moveNumber = randomMove(moveEngine);
+      size_t potentialRow = currentRow + horizontal[moveNumber];
+      size_t potentialColumn = currentColumn + vertical[moveNumber];
+
+      if (potentialRow >= 0 && potentialRow <= 7 
+            && potentialColumn >= 0 && potentialColumn <= 7)
+      {
+         if (board[potentialRow][potentialColumn] == 0)
+         {
+            currentRow = potentialRow;
+            currentColumn = potentialColumn;
+
+            std::cout << "Move " << moveCount << ":  " << moveNumber
+               << "\tRow - " << currentRow << "\t\tColumn - " << currentColumn
+               << std::endl;
+
             ++moveCount;
-            std::cout << moveCount << ":  " << moveNumber << "\tRow - " << currentRow << "\t\tColumn - " << currentColumn << std::endl;
             board[currentRow][currentColumn] = moveCount;
-      
-         }
-         else {
-            landedAlready = true;
          }
       }
+
+      ++counter;
    }
 
    std::cout << "Knight moved " << moveCount << " times." << std::endl;

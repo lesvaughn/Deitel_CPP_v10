@@ -4,10 +4,10 @@
  * Deitel - C++ How to Program
  * Exercise 7.21 (Workshop Summary)
  * 
- * Compiled using GNU 11.2.1
+ * Compiled using GNU 10.2.1
  * 
- * Created: Sept 1,2021
- * Author:  Les Vaughn
+ * Created: Dec 14,2021
+ * Author:  lvaughn
  *****************************************************************************/
 
 #include <iostream>
