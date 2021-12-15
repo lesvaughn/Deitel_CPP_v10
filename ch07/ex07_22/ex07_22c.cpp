@@ -1,16 +1,15 @@
-/*
- ***************************************************
- *
+/*****************************************************************************
  * ex07_22c.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.22c (Knight's Tour)
  * 
- * Created: Sept 5,2021
- * Author:  Les Vaughn
+ * Compiled using GNU 10.2.1
  * 
- ***************************************************
-*/
+ * Created: Dec 15,2021
+ * Author:  laughn
+ *****************************************************************************/
+
 #include <iostream>
 #include <array>
 #include <random>
@@ -30,14 +29,16 @@ int main() {
       for (size_t startColumn{0}; startColumn <= 7; ++startColumn)
       {
          std::array<std::array<int, column>, row> board{0};
-         std::array<std::array<int, column>, row> accessibility {2, 3, 4, 4, 4, 4, 3, 2,
-                                                           3, 4, 6, 6, 6, 6, 4, 3,
-                                                           4, 6, 8, 8, 8, 8, 6, 4,
-                                                           4, 6, 8, 8, 8, 8, 6, 4,
-                                                           4, 6, 8, 8, 8, 8, 6, 4,
-                                                           4, 6, 8, 8, 8, 8, 6, 4,
-                                                           3, 4, 6, 6, 6, 6, 4, 3,
-                                                           2, 3, 4, 4, 4, 4, 3, 2};
+         std::array<std::array<int, column>, row> accessibility
+                                                     {2, 3, 4, 4, 4, 4, 3, 2,
+                                                      3, 4, 6, 6, 6, 6, 4, 3,
+                                                      4, 6, 8, 8, 8, 8, 6, 4,
+                                                      4, 6, 8, 8, 8, 8, 6, 4,
+                                                      4, 6, 8, 8, 8, 8, 6, 4,
+                                                      4, 6, 8, 8, 8, 8, 6, 4,
+                                                      3, 4, 6, 6, 6, 6, 4, 3,
+                                                      2, 3, 4, 4, 4, 4, 3, 2};
+
          unsigned int counter{0};
          unsigned int moveCount{0};
          unsigned int currentRow = startRow;
@@ -79,9 +80,6 @@ int main() {
                currentColumn = bestColumn;
                ++moveCount;
                board[currentRow][currentColumn] = moveCount;
-         
-               //std::cout << "Move " << moveCount << ":  Row - " << currentRow
-                //  << "   Column -  " << currentColumn << std::endl;
             }
 
             ++counter;
@@ -93,10 +91,8 @@ int main() {
              ++totalFulltours;
           }
       } // for j
-     
    } // end for i
 
    std::cout << "\nThere were " << totalFulltours << " full tours" << std::endl;
    
-
 }

@@ -1,16 +1,14 @@
-/*
- ***************************************************
- *
+/*****************************************************************************
  * ex07_22b.cpp
  * 
  * Deitel - C++ How to Program
  * Exercise 7.22b (Knight's Tour)
  * 
- * Created: Sept 5,2021
- * Author:  Les Vaughn
+ * Complied using GNU 10.2.1
  * 
- ***************************************************
-*/
+ * Created: Dec 15,2021
+ * Author:  lvaughn
+ *****************************************************************************/
 #include <iostream>
 #include <array>
 #include <random>
@@ -19,7 +17,7 @@
 int main() {
    const unsigned int row{8};
    const unsigned int column{8};
-   std::array<std::array<int, column>, row> board;
+   std::array<std::array<int, column>, row> board{0};
    std::array<int, column> horizontal{2, 1, -1, -2, -2, -1, 1, 2};
    std::array<int, row> vertical{-1, -2, -2, -1, 1, 2, 2, 1};
 
@@ -27,8 +25,8 @@ int main() {
    std::uniform_int_distribution<size_t> randomMove{0, 7};
 
    unsigned int moveCount{0};
-   size_t currentRow{3};
-   size_t currentColumn{4};
+   unsigned int currentRow{3};
+   unsigned int currentColumn{4};
    unsigned int counter{0};
 
    std::cout << "\nKnight starts at row " << currentRow << " and column "
@@ -36,21 +34,19 @@ int main() {
 
    while (counter <= 64)
    {
-      size_t moveNumber = randomMove(moveEngine);
-      size_t potentialRow = currentRow + horizontal[moveNumber];
-      size_t potentialColumn = currentColumn + vertical[moveNumber];
+      unsigned int moveNumber = randomMove(moveEngine);
+      unsigned int potentialRow = currentRow + horizontal[moveNumber];
+      unsigned int potentialColumn = currentColumn + vertical[moveNumber];
 
-      if (potentialRow >= 0 && potentialRow <= 7 
-            && potentialColumn >= 0 && potentialColumn <= 7)
+      if (potentialRow <= 7 && potentialColumn <= 7)
       {
          if (board[potentialRow][potentialColumn] == 0)
          {
             currentRow = potentialRow;
             currentColumn = potentialColumn;
 
-            std::cout << "Move " << moveCount << ":  " << moveNumber
-               << "\tRow - " << currentRow << "\t\tColumn - " << currentColumn
-               << std::endl;
+            std::cout << "Move " << moveCount << ":  " << "\tRow - "
+               << currentRow << "\t\tColumn - " << currentColumn << std::endl;
 
             ++moveCount;
             board[currentRow][currentColumn] = moveCount;
