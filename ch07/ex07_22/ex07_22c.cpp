@@ -97,5 +97,6 @@ int main() {
    } // end for i
 
    std::cout << "\nThere were " << totalFulltours << " full tours" << std::endl;
+   
 
 }
