@@ -6,7 +6,12 @@
 
 # Unignore all dirs
 !*/
+
+# ignore following dirs
 .vscode
+
+# ignore exectuables
 *.exe
-program_header.txt
+
+# ignore code-workspace
 cpp_v10.code-workspace
