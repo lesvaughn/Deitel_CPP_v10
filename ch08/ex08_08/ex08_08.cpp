@@ -21,7 +21,7 @@ int main()
 
     //  b)  Declare a pointer vPtr that points to an object of type 
     //      unsigned int
-    unsigned int* vPtr;
+    unsigned int* vPtr{nullptr};
 
     //  c)  Use a for statement to display the elements of built-in array
     //      values using array subscript notation
