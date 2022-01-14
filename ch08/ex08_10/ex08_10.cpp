@@ -1,16 +1,16 @@
 /*****************************************************************************
  * ex08_10.cpp
- * 
+ *
  * Deitel - C++ How to Program v10
  * Exercise 8.10 (Function Headers and Prototypes)
- * 
+ *
  * Dec 27, 2021
  * lvaughn
  *****************************************************************************/
 
 #include <iostream>
 
-// function prorotypes
+ // function prorotypes
 double sum(double* x, double* y, double* z);
 void rate(double itemRate[], size_t size);
 
@@ -30,5 +30,5 @@ double sum(double* x, double* y, double* z)
 
 void rate(double itemRate[], size_t size)
 {
-    
+
 }
