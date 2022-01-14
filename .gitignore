@@ -1,0 +1,17 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# ignore following dirs
+.vscode
+
+# ignore exectuables
+*.exe
+
+# ignore code-workspace
+cpp_v10.code-workspace
