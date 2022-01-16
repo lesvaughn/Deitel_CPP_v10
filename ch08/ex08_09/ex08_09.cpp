@@ -12,7 +12,8 @@
 
 int main()
 {
-    //  a)  Declare the variable charPtr to be a pointer to an object of type char
+    //  a)  Declare the variable charPtr to be a pointer to an object of type
+    //      char
     char* charPtr{ nullptr };
 
     //  b)  Assign the address of variable var2 to pointer variable charPtr
