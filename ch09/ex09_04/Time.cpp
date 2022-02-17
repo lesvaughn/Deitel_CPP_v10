@@ -15,13 +15,11 @@
 #include <ctime>
 #include "Time.h"
 
-void Time::setTime()
+Time::Time()
 {
     time_t curr_time;
     curr_time = time(NULL);
     tm *tm_local = localtime(&curr_time);
-
-    std::cout << "Time is " << tm_local->tm_hour << std::endl;
 
     hour = tm_local->tm_hour;
     minute = tm_local->tm_min;

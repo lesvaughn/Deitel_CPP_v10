@@ -14,7 +14,7 @@
 
 class Time {
 public:
-    void setTime();
+    Time();
     std::string toUniversalString() const;
     std::string toStandardString() const;
 
