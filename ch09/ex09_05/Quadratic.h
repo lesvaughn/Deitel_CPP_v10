@@ -15,10 +15,10 @@
 class Quadratic {
 public:
     Quadratic(double aVal, double bVal, double cVal);
-    double add(Quadratic quadratic) const;
-    double subtract(Quadratic quadratic) const;
+    void add(Quadratic q);
+    void subtract(Quadratic q);
     std::string toString() const;
-    double solve();
+    void solve() const;
 
 private:
     double a{1};
