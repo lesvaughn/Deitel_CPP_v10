@@ -17,10 +17,26 @@
 
 class Student {
 public:
-    Student::Student(Name fullName, char gender, Date birthYear,
-        unsigned int registration_nbr, std::string emailAddress);
+    Student::Student(Name&, char gender, Date&, unsigned int,
+        std::string&);
 
-    void set
+    void setName(Name&);
+    void setSex(char);
+    void setDateOfBirth(Date&);
+    void setRegistrationNumber(unsigned int);
+    void setEmail(std::string&);
+
+    Name getName() const;
+    char getSex() const;
+    Date getDate() const;
+    unsigned int getRegistrationNumber() const;
+    std::string getEmail() const;
+
+    void setName(Name&);
+    void setSex(char);
+    void setDateOfBirth(Date&);
+    void setRegistrationNumber(unsigned int);
+    void setEmail(std::string&);
 
 private:
     Name name;

@@ -16,20 +16,21 @@
 
 class Rational {
 public:
-    Rational(int n, int d);
-    void add(Rational r1, Rational r2);
-    void subtract(int n, int d);
-    void multiply(int n, int d);
-    void divide(int n, int d);
+    Rational(int n = 1, int d = 1);
+    void add(const Rational&);
+    void subtract(const Rational&);
+    void multiply(const Rational&);
+    void divide(const Rational&);
     std::string toRationalString() const;
-    double toDouble();
+    double toDouble() const;
     
 private:
-    int numerator;
-    int denominator;
+    int numerator{0};
+    int denominator{0};
 
     // utility function
-    int gcd(int n, int d);
+    int gcd(int, int);
+    void simplify(int, int);
 };
 
 #endif

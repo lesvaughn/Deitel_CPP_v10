@@ -9,8 +9,8 @@
  *****************************************************************************/
 #include "Student.h"
 
-Student::Student(Name student_name, char gender, Date birthDate,
-                 unsigned int registration_nbr, std::string emailAddress)
+Student::Student(Name& student_name, char gender, Date& birthDate,
+                 unsigned int registration_nbr, std::string& emailAddress)
     : name{student_name}, sex{gender}, dateOfBirth{birthDate},
       registrationNumber{registration_nbr}, email{emailAddress} {
 }
